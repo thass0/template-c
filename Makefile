@@ -25,16 +25,14 @@ all: $(EXEC)
 run: $(EXEC)
 	./$(EXEC) $(ARGS)
 
-$(EXEC): $(OBJS) | $(BUILD_DIR)
+$(EXEC): $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 -include $(DEPS)
 
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(dir $@)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
-
-$(BUILD_DIR):
-	mkdir $(BUILD_DIR)
 
 clean:
 	$(RM) -r $(BUILD_DIR)
