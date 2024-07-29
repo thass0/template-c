@@ -1,1 +1,7 @@
 build/
+compile_commands.json
+*.patch
+.*
+\!.zed
+\!.vscode
+\!.gitignore
