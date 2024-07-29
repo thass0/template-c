@@ -1,6 +1,7 @@
 CC := clang
 CFLAGS := -std=c99 -Wall -Wextra -pedantic
-CPPFLAGS := -MMD
+CFLAGS += -Wno-keyword-macro -Wno-gnu-zero-variadic-macro-arguments
+CPPFLAGS := -MMD -Iinclude
 LDFLAGS :=
 
 ifdef RELEASE

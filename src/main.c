@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include <es/debug.h>
 
 int main(void)
 {
-    printf("Hello, world!\n");
+    es_debug("Hello, world!\n");
     return 0;
 }
