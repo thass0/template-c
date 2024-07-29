@@ -37,7 +37,7 @@ typedef int BOOL;
 
 #define sizeof(x) ((sz)sizeof(x))
 #define alignof(x) ((sz)__alignof__(x))
-#define array_count(x) (sizeof(x) / sizeof(x[0]))
+#define array_size(x) (sizeof(x) / sizeof(x[0]))
 #define NULL ((void *)0)
 #define FALSE 0
 #define TRUE 1
